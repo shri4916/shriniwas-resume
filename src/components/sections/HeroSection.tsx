@@ -79,7 +79,7 @@ export default function HeroSection() {
               alt={`Portrait of ${personalInfo.name}`}
               width={481}
               height={587}
-              fetchPriority="high"
+              loading="eager"
               className="aspect-[4/5] w-full object-cover object-top"
             />
           </div>
