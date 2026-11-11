@@ -18,11 +18,14 @@ export default function ContactSection() {
               <img 
                 src={personalInfo.avatar} 
                 alt={personalInfo.name}
-                className="w-48 h-64 object-cover"
+                className="w-48 h-64 object-cover object-top"
               />
             </div>
             
             <p className="text-large">{personalInfo.name}</p>
+            <p className="text-small">
+              {personalInfo.location.city}, {personalInfo.location.country}
+            </p>
             
             <a 
               href={`mailto:${personalInfo.email}`}

@@ -10,10 +10,10 @@ export default function EducationSection() {
             {index > 0 && <hr className="border-t border-foreground/15 mb-16 md:mb-20" />}
             <div className="space-y-3">
               <p className="text-large leading-tight">
-                {edu.degree} {edu.field}, {edu.institution}
+                {edu.field ? `${edu.degree}, ${edu.field}` : edu.degree} — {edu.institution}
               </p>
               <p className="text-small">
-                {edu.startYear} - {edu.endYear}
+                {edu.startYear} - {edu.endYear} · {edu.location}
               </p>
               {edu.details && (
                 <p className="text-body mt-4">{edu.details}</p>
