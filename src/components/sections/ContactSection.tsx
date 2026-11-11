@@ -8,7 +8,6 @@ export default function ContactSection() {
     <section id="contact" className="py-20 md:py-28">
       <div className="container-page">
         <Reveal className="relative overflow-hidden rounded-xl bg-primary px-6 py-14 text-primary-foreground sm:px-12 md:px-16 md:py-20">
-          <div aria-hidden className="absolute right-0 top-0 h-full w-1/3 border-l border-primary-foreground/10 hidden md:block" />
           <div className="relative grid gap-12 md:grid-cols-[1.3fr_1fr] md:items-end">
             <div>
               <p className="eyebrow !text-accent-soft">Contact Me</p>
