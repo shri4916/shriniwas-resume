@@ -6,6 +6,8 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  // GitHub Pages serves from /<repo>/; the deploy workflow sets BASE_PATH.
+  base: process.env.BASE_PATH || "/",
   server: {
     host: "::",
     port: 8080,
