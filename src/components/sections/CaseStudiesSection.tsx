@@ -32,7 +32,7 @@ function CaseStudyBody({ study }: { study: CaseStudy }) {
   return (
     <div className="mt-2 space-y-6">
       {blocks.map((b) => (
-        <div key={b.label} className="grid gap-3 sm:grid-cols-[11rem_1fr] sm:gap-6">
+        <div key={b.label} className="grid items-start gap-2 sm:grid-cols-[11rem_1fr] sm:gap-6">
           <p className="flex items-center gap-2 text-sm font-semibold text-primary">
             <b.icon className="h-4 w-4 text-accent" /> {b.label}
           </p>
