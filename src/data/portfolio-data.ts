@@ -11,52 +11,190 @@ import type {
   Project,
   Education,
   SocialLink,
+  Certification,
+  Award,
 } from "@/types/portfolio";
+import portrait from "@/assets/shriniwas-ambad-portrait.png.asset.json";
 
 // ===== Portfolio Data =====
 
 export const personalInfo: PersonalInfo = {
-  name: "Sarah Martinez",
-  title: "Senior Product Manager",
-  location: { city: "San Francisco, CA", country: "USA" },
-  website: "sarahmartinez.com",
-  email: "hello@sarahmartinez.com",
-  avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=1000&fit=crop&crop=faces",
-  bio: "I'm a product leader with over 10 years of experience building and scaling products that solve real user problems. My approach combines strategic thinking with deep customer empathy, bridging the gap between business objectives and user needs to deliver products that drive meaningful impact.\n\nCurrently leading product at a fast-growing tech startup, I've launched products used by millions of users across web and mobile platforms. I'm passionate about product strategy, data-driven decision making, and mentoring the next generation of product managers.\n\nWhen I'm not building products, you'll find me speaking at conferences, writing about product management, or advising early-stage startups. I believe in giving back to the product community that has given me so much.",
-  skills: "Product Strategy, User Research, Data Analysis, A/B Testing, Roadmap Planning, Stakeholder Management, Agile, SQL, Analytics, Customer Discovery, OKRs, Go-to-Market Strategy, Team Leadership, Cross-functional Collaboration",
+  name: "Shriniwas Ambad",
+  title: "Product Owner / Sr Business Analyst",
+  location: { city: "Pune", country: "India" },
+  website: "",
+  email: "ambad.shriniwas@gmail.com",
+  avatar: portrait.url,
+  bio: "Senior Technical Analyst / Senior Business Analyst with 9+ years of experience delivering enterprise applications across Healthcare, Banking, Insurance, Automotive, and E-Commerce domains. Expertise in business and technical analysis, requirement elicitation, impact analysis, system integrations, API documentation, data mapping, and Agile delivery.",
+  skills: [
+    "Business & Technical Analysis",
+    "Requirement Gathering & Functional Analysis",
+    "User Stories & Acceptance Criteria",
+    "Impact & Dependency Analysis",
+    "REST APIs & API Documentation",
+    "System Integration & Data Mapping",
+    "Event-Driven Architecture",
+    "Agile Scrum & SAFe",
+    "Azure DevOps, Jira & Confluence",
+    "SIT, UAT & Defect Management",
+    "SQL & Data Analysis",
+    "Postman API Testing",
+    "Java, Spring Boot & Microservices (basic)",
+    "AWS Lambda & MSK (concepts)",
+    "Stakeholder & Release Management",
+    "AI Tools: ChatGPT, Copilot, Claude",
+  ],
+  languages: ["English", "Hindi", "Marathi"],
 };
 
 export const experience: Experience[] = [
   {
     id: "exp-1",
-    company: "Tech Innovators Inc",
-    role: "Senior Product Manager",
-    location: "San Francisco, CA",
-    startDate: "2021-03",
-    endDate: null,
-    description: "Led product strategy for flagship platform serving 2M+ active users, growing revenue by 150% YoY. Launched 3 major features that increased user engagement by 40% and reduced churn by 25%. Built and managed cross-functional team of 12 engineers, designers, and analysts. Defined product roadmap and OKRs aligned with company vision.",
+    company: "Quantum Integrators",
+    role: "Product Owner Senior | Business Analyst | Project Manager",
+    location: "Pune, India",
     current: true,
+    highlights: [
+      "Performed impact analysis for enhancements and change requests across integrated healthcare platforms.",
+      "Collaborated with architects and development teams to document APIs, integration flows, and business rules.",
+      "Created process flows, data mappings, and functional specifications for system integrations.",
+      "Supported SIT, UAT, defect triage, and production release activities.",
+      "Worked extensively in Azure DevOps for backlog management, sprint tracking, and release planning.",
+    ],
   },
   {
     id: "exp-2",
-    company: "Growth Analytics Co",
-    role: "Product Manager",
-    location: "New York, NY",
-    startDate: "2018-06",
-    endDate: "2021-02",
-    description: "Shipped 15+ product initiatives for B2B SaaS platform, increasing ARR by $5M. Led data-driven experimentation program running 50+ A/B tests annually. Collaborated with engineering and design to define and ship quarterly roadmap. Conducted extensive customer research informing product strategy and prioritization.",
+    company: "KPIT",
+    role: "Sr Business Analyst",
+    location: "Pune, India",
     current: false,
+    highlights: [
+      "Conducted system dependency and impact analysis for application enhancements.",
+      "Defined API requirements and integration specifications between multiple enterprise systems.",
+      "Collaborated with architects and developers to translate business requirements into technical solutions.",
+      "Supported end-to-end Agile delivery including sprint planning, testing support, and release readiness.",
+    ],
   },
   {
     id: "exp-3",
-    company: "StartupXYZ",
-    role: "Associate Product Manager",
-    location: "Austin, TX",
-    startDate: "2015-01",
-    endDate: "2018-05",
-    description: "First product hire, defined product vision and strategy from ground up. Built mobile app that reached #1 in category on Product Hunt with 100K+ downloads. Established product development processes including sprint planning and user feedback loops. Collaborated with founders on fundraising and go-to-market strategy.",
+    company: "Deutsche Bank Group",
+    role: "Business Functional Analyst",
+    location: "Pune, India",
     current: false,
+    highlights: [
+      "Worked on reference data integrations involving multiple upstream and downstream applications.",
+      "Performed data mapping and interface analysis for enterprise banking systems.",
+      "Supported SIT/UAT activities and coordinated issue resolution across technology teams.",
+      "Created functional and technical documentation for system enhancements and integrations.",
+    ],
   },
+  {
+    id: "exp-4",
+    company: "Techspian",
+    role: "Senior Business Analyst",
+    location: "Pune, India",
+    current: false,
+    highlights: [
+      "Managed product backlog and prioritized requirements based on customer and business needs.",
+      "Defined user stories, acceptance criteria, and functional specifications for Agile delivery teams.",
+      "Collaborated with UX designers and developers to deliver intuitive user experiences.",
+      "Facilitated product discovery workshops and stakeholder alignment sessions.",
+    ],
+  },
+  {
+    id: "exp-5",
+    company: "ITC Infotech",
+    role: "Associate IT Consultant",
+    location: "Pune, India",
+    current: false,
+    highlights: [
+      "Created project blueprints and converted them into actionable backlogs.",
+      "Planned and executed project management strategies for successful delivery.",
+      "Hosted Agile Scrum ceremonies to drive efficient development cycles.",
+      "Conducted gap analysis and root cause analysis to optimize processes.",
+      "Reviewed UI design documents and test cases for improved usability.",
+      "Trained clients and end-users on new applications and systems.",
+    ],
+  },
+  {
+    id: "exp-6",
+    company: "Infodeals Technologies Pvt Ltd",
+    role: "Business Analyst",
+    location: "",
+    current: false,
+    highlights: [
+      "Gathered and analyzed requirements, translating business needs into technical specifications.",
+      "Facilitated communication between business and technical teams.",
+      "Performed risk assessments and defined mitigation strategies.",
+      "Conducted data analysis using Excel, MySQL, and Power BI for decision-making.",
+      "Managed project scope, stakeholder expectations, and change requests.",
+      "Led testing efforts and mentored junior analysts.",
+    ],
+  },
+];
+
+export const projects: Project[] = [
+  {
+    id: "proj-1",
+    name: "Clinical Trial Integration Platform (CTIP)",
+    highlights: [
+      "Gathered and analyzed business and technical requirements for healthcare system integrations.",
+      "Created user stories, acceptance criteria, process flows, and functional specifications.",
+      "Documented API contracts, event flows, and data mappings between applications.",
+    ],
+  },
+  {
+    id: "proj-2",
+    name: "Healthcare Data Management System (J&J / Clinical Trials)",
+    highlights: [
+      "Worked on clinical trial data workflows ensuring compliance with GxP standards.",
+      "Supported data analysis, validation, and reporting for healthcare systems.",
+    ],
+  },
+  {
+    id: "proj-3",
+    name: "MasterCard – Global Installments",
+    highlights: [
+      "Worked on BNPL card payment solutions within a 4-party payment model, supporting global transaction flows.",
+      "Enabled better decision-making through analysis of transaction data and customer payment behavior.",
+    ],
+  },
+  {
+    id: "proj-4",
+    name: "Insurance PolicyCenter Platform",
+    highlights: [
+      "Supported implementation of PolicyCenter for policy creation, underwriting, and renewals.",
+      "Defined workflows and business rules with business and technical teams, using data insights and automation to improve efficiency.",
+    ],
+  },
+  {
+    id: "proj-5",
+    name: "Customer Risk & Fraud Analysis (Banking / Insurance)",
+    highlights: [
+      "Identified fraud patterns and risk indicators using transaction and customer data.",
+      "Supported rule-based and AI-assisted fraud detection initiatives with analytics teams.",
+    ],
+  },
+  {
+    id: "proj-6",
+    name: "Healthcare Data Analysis & Reporting (P-Care)",
+    highlights: [
+      "Analyzed structured healthcare datasets to identify trends, data gaps, and reporting needs.",
+      "Ensured accurate data transformation and validation for business insights.",
+    ],
+  },
+];
+
+export const certifications: Certification[] = [
+  { id: "cert-1", name: "IIM Indore – Business Analyst", issuer: "Business Analysis, Data Science", period: "2020 – 2021" },
+  { id: "cert-2", name: "SAFe 4 Product Owner / Product Manager", period: "2019 – 2020" },
+  { id: "cert-3", name: "Certified Scrum Product Owner (CSPO)", period: "2019 – 2021" },
+];
+
+export const awards: Award[] = [
+  { id: "award-1", name: "Excellence Award", organization: "Deutsche Bank Group", date: "2024" },
+  { id: "award-2", name: "Pat on Back", organization: "Techspian", date: "2022" },
+  { id: "award-3", name: "Outstanding Performer of the Quarter", organization: "ITC Infotech", date: "2021" },
 ];
 
 export const writing: Writing[] = [
@@ -149,89 +287,25 @@ export const speaking: Speaking[] = [
   },
 ];
 
-export const projects: Project[] = [
-  {
-    id: "proj-1",
-    name: "OpenDesign",
-    description:
-      "Open-source design system components library built with React and TypeScript. Used by 500+ projects worldwide.",
-    techStack: ["React", "TypeScript", "Storybook", "CSS-in-JS"],
-    liveUrl: "https://opendesign.example.com",
-    githubUrl: "https://github.com/example/opendesign",
-    status: "active",
-  },
-  {
-    id: "proj-2",
-    name: "DesignTools API",
-    description:
-      "RESTful API for integrating design tools with project management platforms. Automates design handoff workflows.",
-    techStack: ["Node.js", "Express", "PostgreSQL", "Docker"],
-    githubUrl: "https://github.com/example/designtools-api",
-    status: "active",
-  },
-  {
-    id: "proj-3",
-    name: "ColorPalette Generator",
-    description:
-      "Accessible color palette generator ensuring WCAG compliance. Generates harmonious color schemes with contrast checking.",
-    techStack: ["React", "WebGL", "Color Science"],
-    liveUrl: "https://colorpalette.example.com",
-    githubUrl: "https://github.com/example/color-palette",
-    status: "active",
-  },
-  {
-    id: "proj-4",
-    name: "Portfolio Template",
-    description:
-      "Free portfolio template for designers and developers. Includes dark mode, responsive design, and SEO optimization.",
-    techStack: ["Next.js", "Tailwind CSS", "MDX"],
-    liveUrl: "https://template.example.com",
-    githubUrl: "https://github.com/example/portfolio-template",
-    status: "archived",
-  },
-];
-
 export const education: Education[] = [
   {
     id: "edu-1",
-    institution: "University of California, Berkeley",
-    degree: "Bachelor of Arts",
-    field: "Interactive Media Design",
-    startYear: "2011",
-    endYear: "2015",
-    location: "Berkeley, CA",
-    details: "Concentration in Human-Computer Interaction",
+    institution: "Indian Institute of Management, Indore",
+    degree: "Business Analyst Program",
+    field: "",
+    startYear: "2020",
+    endYear: "2021",
+    location: "Indore, India",
   },
   {
     id: "edu-2",
-    institution: "General Assembly",
-    degree: "Certificate",
-    field: "User Experience Design",
-    startYear: "2014",
-    endYear: "2014",
-    location: "San Francisco, CA",
+    institution: "Pune University",
+    degree: "Bachelor of Engineering",
+    field: "Electronics Engineering",
+    startYear: "2013",
+    endYear: "2016",
+    location: "Nashik, India",
   },
 ];
 
-export const socialLinks: SocialLink[] = [
-  {
-    platform: "LinkedIn",
-    username: "sarahmartinez",
-    url: "https://linkedin.com/in/sarahmartinez",
-  },
-  {
-    platform: "GitHub",
-    username: "sarahmartinez",
-    url: "https://github.com/sarahmartinez",
-  },
-  {
-    platform: "Twitter",
-    username: "@sarahmartinez",
-    url: "https://twitter.com/sarahmartinez",
-  },
-  {
-    platform: "Medium",
-    username: "sarahmartinez",
-    url: "https://medium.com/@sarahmartinez",
-  },
-];
+export const socialLinks: SocialLink[] = [];
