@@ -1,27 +1,25 @@
 import Layout from "@/components/Layout";
-import Navigation from "@/components/Navigation";
-import HeaderSection from "@/components/sections/HeaderSection";
+import HeroSection from "@/components/sections/HeroSection";
 import AboutSection from "@/components/sections/AboutSection";
-import WorkSection from "@/components/sections/WorkSection";
-import ProjectsSection from "@/components/sections/ProjectsSection";
+import ExpertiseSection from "@/components/sections/ExpertiseSection";
+import JourneySection from "@/components/sections/JourneySection";
+import ExperienceSection from "@/components/sections/ExperienceSection";
+import CaseStudiesSection from "@/components/sections/CaseStudiesSection";
+import ToolsSection from "@/components/sections/ToolsSection";
 import CertificationsSection from "@/components/sections/CertificationsSection";
-import EducationSection from "@/components/sections/EducationSection";
-import SkillsSection from "@/components/sections/SkillsSection";
 import ContactSection from "@/components/sections/ContactSection";
-import { useActiveSection } from "@/hooks/useActiveSection";
 
 export default function Index() {
-  useActiveSection(100);
   return (
     <Layout>
-      <Navigation />
-      <HeaderSection />
+      <HeroSection />
       <AboutSection />
-      <WorkSection />
-      <ProjectsSection />
-      <EducationSection />
+      <ExpertiseSection />
+      <JourneySection />
+      <ExperienceSection />
+      <CaseStudiesSection />
+      <ToolsSection />
       <CertificationsSection />
-      <SkillsSection />
       <ContactSection />
     </Layout>
   );
