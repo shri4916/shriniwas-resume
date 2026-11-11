@@ -11,7 +11,9 @@ export interface PersonalInfo {
   email: string;
   avatar: string;
   bio: string;
-  skills: string;
+  phone?: string;
+  skills: string[];
+  languages?: string[];
 }
 
 export interface Experience {
@@ -19,9 +21,9 @@ export interface Experience {
   company: string;
   role: string;
   location: string;
-  startDate: string;
-  endDate: string | null;
-  description: string;
+  startDate?: string;
+  endDate?: string | null;
+  highlights: string[];
   media?: string;
   current: boolean;
 }
@@ -52,11 +54,21 @@ export interface Speaking {
 export interface Project {
   id: string;
   name: string;
-  description: string;
-  techStack: string[];
-  liveUrl?: string;
-  githubUrl?: string;
-  status: "active" | "archived";
+  highlights: string[];
+}
+
+export interface Certification {
+  id: string;
+  name: string;
+  issuer?: string;
+  period: string;
+}
+
+export interface Award {
+  id: string;
+  name: string;
+  organization: string;
+  date: string;
 }
 
 export interface Education {

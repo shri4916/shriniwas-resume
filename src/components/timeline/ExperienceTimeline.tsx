@@ -2,7 +2,8 @@ import { experience } from "@/data/portfolio-data";
 import TimelineItem from "./TimelineItem";
 
 export default function ExperienceTimeline() {
-  const formatDateRange = (startDate: string, endDate: string | null) => {
+  const formatDateRange = (startDate?: string, endDate?: string | null) => {
+    if (!startDate) return "";
     const start = new Date(startDate);
     const startMonth = start.toLocaleDateString("en-US", { month: "short", year: "numeric" });
     
@@ -24,7 +25,7 @@ export default function ExperienceTimeline() {
           date={formatDateRange(exp.startDate, exp.endDate)}
           title={`${exp.role} at ${exp.company}`}
           location={exp.location}
-          description={exp.description}
+          description={exp.highlights}
           media={exp.media}
         />
       ))}
