@@ -41,11 +41,11 @@ export const personalInfo: PersonalInfo = {
   titles: ["Senior Business Analyst", "Product Owner", "Business Consultant"],
   headline: "Turning Business Complexity into Digital Solutions.",
   headlineAccent: "Digital Solutions.",
-  yearsOfExperience: "9+",
+  yearsOfExperience: "10+",
   heroDescription:
     "I bridge the gap between business vision and technology execution, translating complex business requirements into scalable digital solutions.",
   about: [
-    "I'm a Senior Business Analyst and Product Owner with nearly 9 years of experience delivering enterprise applications across Banking, E-commerce, Healthcare, Insurance, Automotive and Agriculture.",
+    "I'm a Senior Business Analyst and Product Owner with over 10 years of experience delivering enterprise applications across Banking, E-commerce, Healthcare, Insurance, Automotive and Agriculture.",
     "My work sits where business strategy meets technology delivery. I elicit and structure requirements, analyse impact across connected systems, document APIs and data mappings, and guide Agile teams from backlog to release — so that what gets built is exactly what the business needs.",
     "I've worked with global banks, healthcare platforms and product companies, partnering with architects, developers, designers and senior stakeholders to turn ambiguity into clear, actionable delivery plans.",
   ],

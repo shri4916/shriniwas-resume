@@ -8,7 +8,7 @@ export default function ExpertiseSection() {
       <SectionHeader
         eyebrow="Core Expertise"
         title="Capabilities that move initiatives from idea to impact."
-        intro="A consultant's toolkit built over nearly a decade of enterprise delivery — structured analysis, product ownership and hands-on collaboration with engineering."
+        intro="A consultant's toolkit built over more than a decade of enterprise delivery — structured analysis, product ownership and hands-on collaboration with engineering."
       />
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {expertise.map((item, i) => (
