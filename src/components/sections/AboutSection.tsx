@@ -1,4 +1,4 @@
-import { Mail, MapPin, Languages } from "lucide-react";
+import { Mail, MapPin, Languages, Phone } from "lucide-react";
 import { industries, personalInfo } from "@/data/portfolio-data";
 import { Section, SectionHeader } from "@/components/Section";
 import Reveal from "@/components/Reveal";
@@ -18,6 +18,12 @@ export default function AboutSection() {
                 <Mail className="h-4 w-4 text-accent" />
                 <a href={`mailto:${personalInfo.email}`} className="hover:text-primary transition-colors">
                   {personalInfo.email}
+                </a>
+              </li>
+              <li className="flex items-center gap-3">
+                <Phone className="h-4 w-4 text-accent" />
+                <a href={`tel:${personalInfo.phone.replace(/\s+/g, "")}`} className="hover:text-primary transition-colors">
+                  {personalInfo.phone}
                 </a>
               </li>
               <li className="flex items-center gap-3">
