@@ -15,6 +15,7 @@ export interface PersonalInfo {
   heroDescription: string;
   about: string[];
   email: string;
+  phone: string;
   location: string;
   /** Path to the resume inside /public (served relative to the site base). */
   resumeFile: string;
