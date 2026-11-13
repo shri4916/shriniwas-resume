@@ -50,9 +50,10 @@ export const personalInfo: PersonalInfo = {
     "I've worked with global banks, healthcare platforms and product companies, partnering with architects, developers, designers and senior stakeholders to turn ambiguity into clear, actionable delivery plans.",
   ],
   email: "ambad.shriniwas@gmail.com",
+  phone: "+91 7387383463",
   location: "Pune, India",
   resumeFile: "resume/Shriniwas_Ambad_Resume.pdf",
-  currentRole: { title: "Product Owner Senior", organization: "Quantum Integrators" },
+  currentRole: { title: "Product Owner", organization: "Quantum Integrators" },
   languages: ["English", "Hindi", "Marathi"],
 };
 
