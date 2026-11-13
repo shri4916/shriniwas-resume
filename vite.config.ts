@@ -8,7 +8,9 @@ import tailwindcss from "@tailwindcss/vite";
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   // GitHub Pages repository path
-  base: process.env.BASE_PATH || "/shriniwas-resume/",
+  base: mode === "production"
+    ? (process.env.BASE_PATH || "/shriniwas-resume/")
+    : "/",
 
   server: {
     host: "::",
