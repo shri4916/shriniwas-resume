@@ -11,11 +11,15 @@ export interface PersonalInfo {
   headline: string;
   /** Part of the headline rendered in the accent color (must appear inside `headline`). */
   headlineAccent?: string;
+  /** Short positioning line under the titles, e.g. ["Enterprise Solutions", "Product Delivery"]. */
+  positioning: string[];
   yearsOfExperience: string;
   heroDescription: string;
   about: string[];
   email: string;
   phone: string;
+  /** Set to false to hide the phone number everywhere on the site. */
+  showPhone: boolean;
   location: string;
   /** Path to the resume inside /public (served relative to the site base). */
   resumeFile: string;
@@ -56,7 +60,23 @@ export interface Experience {
   /** Client organisations served while at this employer. Shown separately from the employer. */
   clients?: string[];
   summary: string;
+  /** Areas of responsibility shown as tags (optional). */
+  focusAreas?: string[];
+  /** Achievement-oriented statements. Keep them factual — no invented numbers. */
   highlights: string[];
+}
+
+export interface CaseDiagramStage {
+  label: string;
+  nodes: string[];
+  /** Emphasise this stage (usually the system or step at the centre of the work). */
+  highlight?: boolean;
+}
+
+export interface CaseDiagram {
+  title: string;
+  stages: CaseDiagramStage[];
+  caption?: string;
 }
 
 export interface CaseStudy {
@@ -64,11 +84,23 @@ export interface CaseStudy {
   title: string;
   industry: string;
   tags: string[];
+  /** One or two sentences shown on the card. */
+  summary: string;
   challenge: string;
+  context: string;
   role: string;
+  responsibilities: string[];
   approach: string[];
-  solution: string;
-  impact: string[];
+  architecture: string[];
+  diagram: CaseDiagram;
+  solution: string[];
+  outcomes: string[];
+  /**
+   * Placeholders for results you still need to confirm (e.g. a measured improvement).
+   * Shown only in the editor preview, never on the live site. Move an item into
+   * `outcomes` once it is verified.
+   */
+  outcomesToVerify?: string[];
 }
 
 export interface ToolGroup {
