@@ -20,7 +20,20 @@ function Bullets({ items }: { items: string[] }) {
   );
 }
 
-function Block({ n, label, icon: Icon, children }: { n: number; label: string; icon: typeof Target; children: ReactNode }) {
+function Block({
+  n,
+  label,
+  icon: Icon,
+  children,
+  wide,
+}: {
+  n: number;
+  label: string;
+  icon: typeof Target;
+  children: ReactNode;
+  /** Optional full-width content shown under the block (e.g. a diagram). */
+  wide?: ReactNode;
+}) {
   return (
     <section className="grid gap-3 border-t border-border pt-6 md:grid-cols-[14rem_1fr] md:gap-8">
       <h3 className="flex items-start gap-3 text-sm font-semibold text-primary">
@@ -30,6 +43,7 @@ function Block({ n, label, icon: Icon, children }: { n: number; label: string; i
         </span>
       </h3>
       <div className="text-[0.95rem] leading-relaxed text-foreground/80">{children}</div>
+      {wide && <div className="md:col-span-2 md:pt-2">{wide}</div>}
     </section>
   );
 }
@@ -91,11 +105,8 @@ export default function CaseStudyDetail({ study, index, total, onPrev, onNext }:
             ))}
           </ol>
         </Block>
-        <Block n={5} label="Architecture & Integration" icon={Boxes}>
-          <CaseDiagram diagram={study.diagram} />
-          <div className="mt-5">
-            <Bullets items={study.architecture} />
-          </div>
+        <Block n={5} label="Architecture & Integration" icon={Boxes} wide={<CaseDiagram diagram={study.diagram} />}>
+          <Bullets items={study.architecture} />
         </Block>
         <Block n={6} label="Solution Approach" icon={Layers}>
           <Bullets items={study.solution} />
