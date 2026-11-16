@@ -20,12 +20,14 @@ export default function AboutSection() {
                   {personalInfo.email}
                 </a>
               </li>
+              {personalInfo.showPhone && (
               <li className="flex items-center gap-3">
                 <Phone className="h-4 w-4 text-accent" />
                 <a href={`tel:${personalInfo.phone.replace(/\s+/g, "")}`} className="hover:text-primary transition-colors">
                   {personalInfo.phone}
                 </a>
               </li>
+              )}
               <li className="flex items-center gap-3">
                 <Languages className="h-4 w-4 text-accent" /> {personalInfo.languages.join(" · ")}
               </li>
