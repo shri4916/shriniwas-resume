@@ -6,3 +6,4 @@
 - Styling uses tokens from `src/index.css` `@theme` (Tailwind v4); no raw color utilities in components. Why: one place to change the palette.
 - Case-study `outcomesToVerify` placeholders render only when `import.meta.env.DEV` is true. Why: the owner sees what still needs confirming in the editor, while the live GitHub Pages build never shows unverified claims.
 - Case studies open in an in-page dialog, not separate routes. Why: GitHub Pages has no SPA fallback, so deep routes would 404 on refresh.
+- Keep `package-lock.json` synchronized with `package.json` using npm without removing or downgrading existing dependencies; retain `npm ci` in GitHub Actions. Why: deployments need reproducible installs.
