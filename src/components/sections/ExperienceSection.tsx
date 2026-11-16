@@ -9,6 +9,7 @@ export default function ExperienceSection() {
       <SectionHeader
         eyebrow="Professional Experience"
         title="Enterprise delivery across banks, platforms and product teams."
+        intro="Each role lists the company I was employed by. Where I served a client organisation through that employer, it is shown separately as a client engagement."
       />
       <ol className="relative">
         <span aria-hidden className="absolute left-[7px] top-2 bottom-2 w-px bg-border md:left-[calc(16rem+7px)]" />
@@ -55,13 +56,28 @@ export default function ExperienceSection() {
                   )}
                   {job.clients?.map((c) => (
                     <span key={c} className="rounded-md border border-accent/30 px-2.5 py-1 font-medium text-accent">
-                      Client: {c}
+                      Client engagement: {c}
                     </span>
                   ))}
                 </div>
 
                 <p className="mt-5 leading-relaxed text-foreground/85">{job.summary}</p>
-                <ul className="mt-5 space-y-2.5">
+
+                {job.focusAreas && job.focusAreas.length > 0 && (
+                  <div className="mt-5">
+                    <p className="text-xs font-semibold uppercase tracking-wider text-primary">Responsibilities</p>
+                    <ul className="mt-3 flex flex-wrap gap-2">
+                      {job.focusAreas.map((f) => (
+                        <li key={f} className="rounded-md border border-border px-2.5 py-1 text-xs font-medium text-primary-soft">
+                          {f}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                <p className="mt-6 text-xs font-semibold uppercase tracking-wider text-primary">Key contributions</p>
+                <ul className="mt-3 space-y-2.5">
                   {job.highlights.map((h) => (
                     <li key={h} className="flex gap-3 text-sm leading-relaxed text-muted-foreground">
                       <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" />

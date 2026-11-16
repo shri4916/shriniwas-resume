@@ -5,7 +5,7 @@ import Reveal from "@/components/Reveal";
 export default function ToolsSection() {
   return (
     <Section id="tools" tone="surface">
-      <SectionHeader eyebrow="Tools & Technologies" title="The stack I work with every day." />
+      <SectionHeader eyebrow="Technical Skills" title="The tools and methods I work with every day." />
       <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
         {toolGroups.map((group, i) => (
           <Reveal

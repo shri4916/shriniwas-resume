@@ -29,6 +29,7 @@ export default function ContactSection() {
                 </span>
                 <ArrowUpRight className="h-4 w-4 shrink-0 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
               </a>
+              {personalInfo.showPhone && (
               <a
                 href={`tel:${personalInfo.phone.replace(/\s+/g, "")}`}
                 className="group flex items-center justify-between gap-4 rounded-lg border border-primary-foreground/15 px-5 py-4 transition-colors hover:border-primary-foreground/40 hover:bg-primary-foreground/5"
@@ -39,6 +40,7 @@ export default function ContactSection() {
                 </span>
                 <ArrowUpRight className="h-4 w-4 shrink-0 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
               </a>
+              )}
               <p className="flex items-center gap-3 px-5 text-primary-foreground/75">
                 <MapPin className="h-5 w-5 text-accent-soft" /> {personalInfo.location}
               </p>

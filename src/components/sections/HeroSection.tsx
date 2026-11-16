@@ -23,7 +23,7 @@ export default function HeroSection() {
         <div className="animate-in fade-in slide-in-from-bottom-3 duration-700">
           <p className="eyebrow">{personalInfo.name}</p>
 
-          <h1 className="mt-6 font-serif text-5xl font-medium leading-[1.05] tracking-tight text-primary text-balance sm:text-6xl lg:text-7xl">
+          <h1 className="mt-6 font-serif text-4xl font-medium leading-[1.08] tracking-tight text-primary text-balance sm:text-5xl lg:text-6xl">
             {headlineStart}
             {accentIndex >= 0 && <span className="italic text-accent">{headlineAccent}</span>}
           </h1>
@@ -35,6 +35,10 @@ export default function HeroSection() {
                 {t}
               </span>
             ))}
+          </p>
+
+          <p className="mt-3 text-xs font-semibold uppercase tracking-[0.14em] text-accent">
+            {personalInfo.positioning.join("  |  ")}
           </p>
 
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
