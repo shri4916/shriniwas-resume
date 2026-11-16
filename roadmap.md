@@ -5,3 +5,5 @@
 - [x] GitHub Pages ready (base path, deploy workflow)
 - [x] Update years of experience to 10+ everywhere
 - [x] Portfolio enhancement brief: positioning & hero copy, consistent "Senior Business Analyst / Product Owner" designation, achievement-oriented experience, About emphasis, 7-part case studies with diagrams + preview-only placeholders, skills categories, optional phone, GitHub Pages check
+- [x] Regenerate npm lockfile without removing or downgrading dependencies; verify `npm ci` and build while preserving Vite and GitHub Pages workflow
+- [ ] Confirm automatic GitHub sync delivered the lockfile; blocker: connection status is only available in Lovable Settings → Git, not chat
